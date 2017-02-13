@@ -1,8 +1,8 @@
-﻿using ProjetoModeloDDD.Domain.Entities;
-using ProjetoModeloDDD.Domain.Interfaces.Repository;
-using ProjetoModeloDDD.Domain.Interfaces.Services;
+﻿using ProjectVally.Domain.Entities;
+using ProjectVally.Domain.Interfaces.Repository;
+using ProjectVally.Domain.Interfaces.Services;
 
-namespace ProjetoModeloDDD.Domain.Services
+namespace ProjectVally.Domain.Services
 {
     public class AccountService: ServiceBase<Account>, IAccountService
     {

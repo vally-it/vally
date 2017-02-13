@@ -1,6 +1,6 @@
 ﻿
 
-namespace ProjetoModeloDDD.Domain.Entities
+namespace ProjectVally.Domain.Entities
 {
     public class Produto
     {

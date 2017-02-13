@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace ProjetoModeloDDD.MVC
+namespace ProjectVally.MVC
 {
     public class BundleConfig
     {

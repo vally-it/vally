@@ -1,8 +1,7 @@
-﻿
-using System.Data.Entity.ModelConfiguration;
-using ProjetoModeloDDD.Domain.Entities;
+﻿using System.Data.Entity.ModelConfiguration;
+using ProjectVally.Domain.Entities;
 
-namespace ProjetoModeloDDD.Infra.Data.EntityConfig
+namespace ProjectVally.Infra.Data.EntityConfig
 {
     public class ClienteConfiguration: EntityTypeConfiguration<Cliente>
     {

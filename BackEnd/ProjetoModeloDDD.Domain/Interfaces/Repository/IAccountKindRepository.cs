@@ -1,6 +1,6 @@
-﻿using ProjetoModeloDDD.Domain.Entities;
+﻿using ProjectVally.Domain.Entities;
 
-namespace ProjetoModeloDDD.Domain.Interfaces.Repository
+namespace ProjectVally.Domain.Interfaces.Repository
 {
     public interface IAccountKindRepository : IRepositoryBase<AccountKind>
     {

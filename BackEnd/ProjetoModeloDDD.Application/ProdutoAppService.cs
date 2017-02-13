@@ -1,10 +1,9 @@
-﻿
-using System.Collections.Generic;
-using ProjetoModeloDDD.Application.Interface;
-using ProjetoModeloDDD.Domain.Entities;
-using ProjetoModeloDDD.Domain.Interfaces.Services;
+﻿using System.Collections.Generic;
+using ProjectVally.Application.Interface;
+using ProjectVally.Domain.Entities;
+using ProjectVally.Domain.Interfaces.Services;
 
-namespace ProjetoModeloDDD.Application
+namespace ProjectVally.Application
 {
     public class ProdutoAppService : AppServiceBase<Produto>, IProdutoAppService
     {

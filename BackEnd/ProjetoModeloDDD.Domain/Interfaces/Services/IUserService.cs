@@ -1,6 +1,6 @@
-﻿using ProjetoModeloDDD.Domain.Entities;
+﻿using ProjectVally.Domain.Entities;
 
-namespace ProjetoModeloDDD.Domain.Interfaces.Services
+namespace ProjectVally.Domain.Interfaces.Services
 {
     public interface IUserService : IServiceBase<User>
     {

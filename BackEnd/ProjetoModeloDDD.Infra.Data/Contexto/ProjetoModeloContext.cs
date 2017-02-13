@@ -2,10 +2,10 @@
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
-using ProjetoModeloDDD.Domain.Entities;
-using ProjetoModeloDDD.Infra.Data.EntityConfig;
+using ProjectVally.Domain.Entities;
+using ProjectVally.Infra.Data.EntityConfig;
 
-namespace ProjetoModeloDDD.Infra.Data.Contexto
+namespace ProjectVally.Infra.Data.Contexto
 {
     public class ProjetoModeloContext : DbContext
     {

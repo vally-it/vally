@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using ProjetoModeloDDD.Domain.Entities;
+using ProjectVally.Domain.Entities;
 
-namespace ProjetoModeloDDD.Infra.Data.EntityConfig
+namespace ProjectVally.Infra.Data.EntityConfig
 {
     public class AccountKindConfiguration : EntityTypeConfiguration<AccountKind>
     {

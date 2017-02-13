@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using ProjetoModeloDDD.Domain.Interfaces.Repository;
-using ProjetoModeloDDD.Infra.Data.Contexto;
+using ProjectVally.Domain.Interfaces.Repository;
+using ProjectVally.Infra.Data.Contexto;
 
-namespace ProjetoModeloDDD.Infra.Data.Repositories
+namespace ProjectVally.Infra.Data.Repositories
 {
     public class RepositoryBase<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {

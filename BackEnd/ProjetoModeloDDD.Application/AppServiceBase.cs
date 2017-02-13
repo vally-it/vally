@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ProjetoModeloDDD.Application.Interface;
-using ProjetoModeloDDD.Domain.Interfaces.Services;
+using ProjectVally.Application.Interface;
+using ProjectVally.Domain.Interfaces.Services;
 
-namespace ProjetoModeloDDD.Application
+namespace ProjectVally.Application
 {
     public class AppServiceBase<TEntity> : IDisposable, IAppServiceBase<TEntity> where TEntity : class
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ProjetoModeloDDD.Domain.Entities;
+using ProjectVally.Domain.Entities;
 
-namespace ProjetoModeloDDD.Application.Interface
+namespace ProjectVally.Application.Interface
 {
     public interface IClienteAppService : IAppServiceBase<Cliente>
     {

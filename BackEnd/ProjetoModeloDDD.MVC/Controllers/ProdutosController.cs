@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using AutoMapper;
-using ProjetoModeloDDD.Application.Interface;
-using ProjetoModeloDDD.Domain.Entities;
-using ProjetoModeloDDD.MVC.ViewModels;
+using ProjectVally.Application.Interface;
+using ProjectVally.Domain.Entities;
+using ProjectVally.MVC.ViewModels;
 
-namespace ProjetoModeloDDD.MVC.Controllers
+namespace ProjectVally.MVC.Controllers
 {
     public class ProdutosController : Controller
     {

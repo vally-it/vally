@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace ProjetoModeloDDD.MVC.AutoMapper
+namespace ProjectVally.MVC.AutoMapper
 {
     public class AutoMapperConfig
     {

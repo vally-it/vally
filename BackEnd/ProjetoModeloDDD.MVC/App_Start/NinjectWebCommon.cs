@@ -3,19 +3,19 @@ using System.Web;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Ninject;
 using Ninject.Web.Common;
-using ProjetoModeloDDD.Application;
-using ProjetoModeloDDD.Application.Interface;
-using ProjetoModeloDDD.Domain.Interfaces.Repository;
-using ProjetoModeloDDD.Domain.Interfaces.Services;
-using ProjetoModeloDDD.Domain.Services;
-using ProjetoModeloDDD.Infra.Data.Repositories;
-using ProjetoModeloDDD.MVC.App_Start;
+using ProjectVally.Application;
+using ProjectVally.Application.Interface;
+using ProjectVally.Domain.Interfaces.Repository;
+using ProjectVally.Domain.Interfaces.Services;
+using ProjectVally.Domain.Services;
+using ProjectVally.Infra.Data.Repositories;
+using ProjectVally.MVC;
 using WebActivatorEx;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
 [assembly: ApplicationShutdownMethod(typeof(NinjectWebCommon), "Stop")]
 
-namespace ProjetoModeloDDD.MVC.App_Start
+namespace ProjectVally.MVC
 {
     public static class NinjectWebCommon 
     {

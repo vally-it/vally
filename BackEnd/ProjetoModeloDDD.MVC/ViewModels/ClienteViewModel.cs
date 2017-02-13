@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace ProjetoModeloDDD.MVC.ViewModels
+namespace ProjectVally.MVC.ViewModels
 {
     public class ClienteViewModel
     {

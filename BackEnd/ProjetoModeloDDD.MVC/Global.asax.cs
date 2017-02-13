@@ -2,9 +2,9 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using ProjetoModeloDDD.MVC.AutoMapper;
+using ProjectVally.MVC.AutoMapper;
 
-namespace ProjetoModeloDDD.MVC
+namespace ProjectVally.MVC
 {
     public class MvcApplication : HttpApplication
     {

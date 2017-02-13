@@ -1,7 +1,7 @@
-﻿using ProjetoModeloDDD.Domain.Entities;
-using ProjetoModeloDDD.Domain.Interfaces.Repository;
+﻿using ProjectVally.Domain.Entities;
+using ProjectVally.Domain.Interfaces.Repository;
 
-namespace ProjetoModeloDDD.Infra.Data.Repositories
+namespace ProjectVally.Infra.Data.Repositories
 {
     public class EntryKindRepository : RepositoryBase<EntryKind>, IEntryKindRepository
     {

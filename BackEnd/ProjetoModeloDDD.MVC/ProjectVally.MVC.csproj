@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjetoModeloDDD.MVC</RootNamespace>
-    <AssemblyName>ProjetoModeloDDD.MVC</AssemblyName>
+    <RootNamespace>ProjectVally.MVC</RootNamespace>
+    <AssemblyName>ProjectVally.MVC</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -203,17 +203,17 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProjetoModeloDDD.Application\ProjetoModeloDDD.Application.csproj">
+    <ProjectReference Include="..\ProjetoModeloDDD.Application\ProjectVally.Application.csproj">
       <Project>{fd980265-3eb6-4c23-bb11-8829708411ac}</Project>
-      <Name>ProjetoModeloDDD.Application</Name>
+      <Name>ProjectVally.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProjetoModeloDDD.Domain\ProjetoModeloDDD.Domain.csproj">
+    <ProjectReference Include="..\ProjetoModeloDDD.Domain\ProjectVally.Domain.csproj">
       <Project>{95675a94-7a41-43d7-8ddf-8cec1b6552cd}</Project>
-      <Name>ProjetoModeloDDD.Domain</Name>
+      <Name>ProjectVally.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProjetoModeloDDD.Infra.Data\ProjetoModeloDDD.Infra.Data.csproj">
+    <ProjectReference Include="..\ProjetoModeloDDD.Infra.Data\ProjectVally.Infra.Data.csproj">
       <Project>{7c765813-e77d-49e5-98a2-4c6fa891e4fc}</Project>
-      <Name>ProjetoModeloDDD.Infra.Data</Name>
+      <Name>ProjectVally.Infra.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

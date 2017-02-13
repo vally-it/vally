@@ -1,10 +1,9 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using ProjetoModeloDDD.Domain.Entities;
-using ProjetoModeloDDD.Domain.Interfaces.Repository;
+using ProjectVally.Domain.Entities;
+using ProjectVally.Domain.Interfaces.Repository;
 
-namespace ProjetoModeloDDD.Infra.Data.Repositories
+namespace ProjectVally.Infra.Data.Repositories
 {
     public class ProdutoRepository: RepositoryBase<Produto>, IProdutoRepository
     {

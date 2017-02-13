@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace ProjetoModeloDDD.MVC.Controllers
+namespace ProjectVally.MVC.Controllers
 {
     public class HomeController : Controller
     {

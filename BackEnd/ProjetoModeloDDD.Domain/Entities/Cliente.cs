@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProjetoModeloDDD.Domain.Entities
+namespace ProjectVally.Domain.Entities
 {
     public class Cliente
     {

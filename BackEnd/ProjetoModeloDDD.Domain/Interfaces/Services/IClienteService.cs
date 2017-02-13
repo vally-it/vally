@@ -1,8 +1,7 @@
-﻿
-using System.Collections.Generic;
-using ProjetoModeloDDD.Domain.Entities;
+﻿using System.Collections.Generic;
+using ProjectVally.Domain.Entities;
 
-namespace ProjetoModeloDDD.Domain.Interfaces.Services
+namespace ProjectVally.Domain.Interfaces.Services
 {
     public interface IClienteService: IServiceBase<Cliente>
     {
