@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{B2CD6E35-5632-4FE7-B11B-1E4A6D8A27CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{194C2415-31CB-4040-9972-CA9A619AF971}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{517C7ABC-292B-4EB3-8452-1D5E4646C220}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{7BE5AD37-69F7-4218-AA8E-3B74DF2FB738}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{CFB89906-9363-4F23-83CC-4174C4E73F73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - CrossCutting", "4.1 - CrossCutting", "{5CB945F9-B084-48D7-BC2A-1285BA275E7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{6E6A51DD-2F34-461B-AFC0-E2B24AD7AA01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoModeloDDD.MVC", "ProjetoModeloDDD.MVC\ProjetoModeloDDD.MVC.csproj", "{BBAF519D-27E6-4B10-ABE6-BFD3626A6523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoModeloDDD.Domain", "ProjetoModeloDDD.Domain\ProjetoModeloDDD.Domain.csproj", "{95675A94-7A41-43D7-8DDF-8CEC1B6552CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoModeloDDD.Infra.Data", "ProjetoModeloDDD.Infra.Data\ProjetoModeloDDD.Infra.Data.csproj", "{7C765813-E77D-49E5-98A2-4C6FA891E4FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoModeloDDD.Application", "ProjetoModeloDDD.Application\ProjetoModeloDDD.Application.csproj", "{FD980265-3EB6-4C23-BB11-8829708411AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBAF519D-27E6-4B10-ABE6-BFD3626A6523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAF519D-27E6-4B10-ABE6-BFD3626A6523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAF519D-27E6-4B10-ABE6-BFD3626A6523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAF519D-27E6-4B10-ABE6-BFD3626A6523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95675A94-7A41-43D7-8DDF-8CEC1B6552CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95675A94-7A41-43D7-8DDF-8CEC1B6552CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95675A94-7A41-43D7-8DDF-8CEC1B6552CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95675A94-7A41-43D7-8DDF-8CEC1B6552CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C765813-E77D-49E5-98A2-4C6FA891E4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C765813-E77D-49E5-98A2-4C6FA891E4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C765813-E77D-49E5-98A2-4C6FA891E4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C765813-E77D-49E5-98A2-4C6FA891E4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD980265-3EB6-4C23-BB11-8829708411AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD980265-3EB6-4C23-BB11-8829708411AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD980265-3EB6-4C23-BB11-8829708411AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD980265-3EB6-4C23-BB11-8829708411AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CB945F9-B084-48D7-BC2A-1285BA275E7E} = {CFB89906-9363-4F23-83CC-4174C4E73F73}
+		{6E6A51DD-2F34-461B-AFC0-E2B24AD7AA01} = {CFB89906-9363-4F23-83CC-4174C4E73F73}
+		{BBAF519D-27E6-4B10-ABE6-BFD3626A6523} = {B2CD6E35-5632-4FE7-B11B-1E4A6D8A27CE}
+		{95675A94-7A41-43D7-8DDF-8CEC1B6552CD} = {7BE5AD37-69F7-4218-AA8E-3B74DF2FB738}
+		{7C765813-E77D-49E5-98A2-4C6FA891E4FC} = {6E6A51DD-2F34-461B-AFC0-E2B24AD7AA01}
+		{FD980265-3EB6-4C23-BB11-8829708411AC} = {517C7ABC-292B-4EB3-8452-1D5E4646C220}
+	EndGlobalSection
+EndGlobal
