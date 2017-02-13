@@ -5,7 +5,7 @@ namespace ProjetoModeloDDD.Domain.Entities
 {
     public class Account
     {
-        public int Id { get; set; }
+        public int AccountId { get; set; }
         public string Description { get; set; }
         public bool Enabled { get; set; }
         public decimal CurrentBalance { get; set; }

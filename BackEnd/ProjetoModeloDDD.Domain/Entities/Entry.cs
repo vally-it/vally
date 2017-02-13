@@ -5,7 +5,7 @@ namespace ProjetoModeloDDD.Domain.Entities
 {
     public class Entry
     {
-        public int Id { get; set; }
+        public int EntryId { get; set; }
         public string Description { get; set; }
         public decimal Value { get; set; }
         public char Type { get; set; }

@@ -33,10 +33,15 @@ namespace ProjetoModeloDDD.Infra.Data.Contexto
                 .Configure(p => p.HasColumnType("varchar"));
 
             modelBuilder.Properties<string>()
-                .Configure(p => p.HasMaxLength(100));
+                .Configure(p => p.HasMaxLength(250));
 
             modelBuilder.Configurations.Add(new ClienteConfiguration());
             modelBuilder.Configurations.Add(new ProdutoConfiguration());
+            modelBuilder.Configurations.Add(new AccountConfiguration());
+            modelBuilder.Configurations.Add(new AccountKindConfiguration());
+            modelBuilder.Configurations.Add(new EntryConfiguration());
+            modelBuilder.Configurations.Add(new EntryKindConfiguration());
+            modelBuilder.Configurations.Add(new UserConfiguration());
         }
 
         public override int SaveChanges()

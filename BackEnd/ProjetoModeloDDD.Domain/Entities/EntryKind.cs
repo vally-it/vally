@@ -3,7 +3,7 @@ namespace ProjetoModeloDDD.Domain.Entities
 {
     public class EntryKind
     {
-        public int Id { get; set; }
+        public int EntryKindId { get; set; }
         public string Description { get; set; }
 
         public int OwnerId { get; set; }

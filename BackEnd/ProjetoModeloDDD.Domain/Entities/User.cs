@@ -3,7 +3,7 @@ namespace ProjetoModeloDDD.Domain.Entities
 {
     public class User
     {
-        public int Id { get; set; }
+        public int UserId { get; set; }
         public string Name { get; set; }
         public string Cpf { get; set; }
         public string Mail { get; set; }
