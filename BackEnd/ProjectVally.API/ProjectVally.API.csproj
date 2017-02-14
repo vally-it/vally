@@ -118,15 +118,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProjetoModeloDDD.Application\ProjectVally.Application.csproj">
+    <ProjectReference Include="..\ProjectVally.Application\ProjectVally.Application.csproj">
       <Project>{fd980265-3eb6-4c23-bb11-8829708411ac}</Project>
       <Name>ProjectVally.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProjetoModeloDDD.Domain\ProjectVally.Domain.csproj">
+    <ProjectReference Include="..\ProjectVally.Domain\ProjectVally.Domain.csproj">
       <Project>{95675a94-7a41-43d7-8ddf-8cec1b6552cd}</Project>
       <Name>ProjectVally.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProjetoModeloDDD.Infra.Data\ProjectVally.Infra.Data.csproj">
+    <ProjectReference Include="..\ProjectVally.Infra.Data\ProjectVally.Infra.Data.csproj">
       <Project>{7c765813-e77d-49e5-98a2-4c6fa891e4fc}</Project>
       <Name>ProjectVally.Infra.Data</Name>
     </ProjectReference>
