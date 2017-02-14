@@ -1,25 +1,23 @@
-using System.Web.Http;
-using Ninject.Web.WebApi;
-using System;
-using System.Web;
-using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-using Ninject;
-using Ninject.Web.Common;
-using Ninject.Web.Mvc;
 using ProjectVally.Application;
 using ProjectVally.Application.Interface;
 using ProjectVally.Domain.Interfaces.Repository;
 using ProjectVally.Domain.Interfaces.Services;
 using ProjectVally.Domain.Services;
 using ProjectVally.Infra.Data.Repositories;
-using ProjectVally.MVC;
-using WebActivatorEx;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
-[assembly: ApplicationShutdownMethod(typeof(NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(ProjectVally.API.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(ProjectVally.API.App_Start.NinjectWebCommon), "Stop")]
 
-namespace ProjectVally.MVC
+namespace ProjectVally.API.App_Start
 {
+    using System;
+    using System.Web;
+
+    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+
+    using Ninject;
+    using Ninject.Web.Common;
+
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -55,7 +53,6 @@ namespace ProjectVally.MVC
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                 RegisterServices(kernel);
-                GlobalConfiguration.Configuration.DependencyResolver = new Ninject.Web.WebApi.NinjectDependencyResolver(kernel);
                 return kernel;
             }
             catch
@@ -72,8 +69,6 @@ namespace ProjectVally.MVC
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind(typeof(IAppServiceBase<>)).To(typeof(AppServiceBase<>));
-            kernel.Bind<IClienteAppService>().To<ClienteAppService>();
-            kernel.Bind<IProdutoAppService>().To<ProdutoAppService>();
             kernel.Bind<IUserAppService>().To<UserAppService>();
             kernel.Bind<IAccountAppService>().To<AccountAppService>();
             kernel.Bind<IAccountKindAppService>().To<AccountKindAppService>();
@@ -81,8 +76,6 @@ namespace ProjectVally.MVC
             kernel.Bind<IEntryKindAppService>().To<EntryKindAppService>();
 
             kernel.Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>));
-            kernel.Bind<IClienteService>().To<ClienteService>();
-            kernel.Bind<IProdutoService>().To<ProdutoService>();
             kernel.Bind<IUserService>().To<UserService>();
             kernel.Bind<IAccountService>().To<AccountService>();
             kernel.Bind<IAccountKindService>().To<AccountKindService>();
@@ -92,8 +85,6 @@ namespace ProjectVally.MVC
 
 
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
-            kernel.Bind<IClienteRepository>().To<ClienteRepository>();
-            kernel.Bind<IProdutoRepository>().To<ProdutoRepository>();
             kernel.Bind<IUserRepository>().To<UserRepository>();
             kernel.Bind<IAccountRepository>().To<AccountRepository>();
             kernel.Bind<IAccountKindRepository>().To<AccountKindRepository>();

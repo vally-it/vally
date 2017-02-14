@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using ProjectVally.Application;
 using ProjectVally.Application.Interface;
@@ -6,15 +10,15 @@ using ProjectVally.Domain.Entities;
 using ProjectVally.Domain.Services;
 using ProjectVally.Infra.Data.Repositories;
 
-namespace ProjectVally.MVC.Controllers
+namespace ProjectVally.API.Controllers
 {
     public class UsersController : ApiController
     {
         private readonly IUserAppService _userApp;
 
-        public UsersController()
+        public UsersController(IUserAppService userApp)
         {
-            _userApp = new UserAppService(new UserService(new UserRepository()));
+            _userApp = userApp;
         }
 
 
@@ -41,6 +45,7 @@ namespace ProjectVally.MVC.Controllers
         // PUT: api/Users/5
         public void Put(int id, [FromBody]User value)
         {
+            if(ModelState.IsValid)
             _userApp.Update(value);
         }
 
