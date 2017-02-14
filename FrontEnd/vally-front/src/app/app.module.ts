@@ -6,15 +6,18 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { EntryListComponent } from './entry-list/entry-list.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountComponent } from './account/account.component';
 
 const appRoutes: Routes = [
+  { path: 'accounts', component: AccountComponent },
   { path: 'entry-list', component: EntryListComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryListComponent
+    EntryListComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
