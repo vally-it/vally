@@ -70,14 +70,31 @@ namespace ProjectVally.MVC
             kernel.Bind(typeof(IAppServiceBase<>)).To(typeof(AppServiceBase<>));
             kernel.Bind<IClienteAppService>().To<ClienteAppService>();
             kernel.Bind<IProdutoAppService>().To<ProdutoAppService>();
+            kernel.Bind<IUserAppService>().To<UserAppService>();
+            kernel.Bind<IAccountAppService>().To<AccountAppService>();
+            kernel.Bind<IAccountKindAppService>().To<AccountKindAppService>();
+            kernel.Bind<IEntryAppService>().To<EntryAppService>();
+            kernel.Bind<IEntryKindAppService>().To<EntryKindAppService>();
 
             kernel.Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>));
             kernel.Bind<IClienteService>().To<ClienteService>();
             kernel.Bind<IProdutoService>().To<ProdutoService>();
+            kernel.Bind<IUserService>().To<UserService>();
+            kernel.Bind<IAccountService>().To<AccountService>();
+            kernel.Bind<IAccountKindService>().To<AccountKindService>();
+            kernel.Bind<IEntryService>().To<EntryService>();
+            kernel.Bind<IEntryKindService>().To<EntryKindService>();
+
+
 
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
             kernel.Bind<IClienteRepository>().To<ClienteRepository>();
             kernel.Bind<IProdutoRepository>().To<ProdutoRepository>();
+            kernel.Bind<IUserRepository>().To<UserRepository>();
+            kernel.Bind<IAccountRepository>().To<AccountRepository>();
+            kernel.Bind<IAccountKindRepository>().To<AccountKindRepository>();
+            kernel.Bind<IEntryRepository>().To<EntryRepository>();
+            kernel.Bind<IEntryKindRepository>().To<EntryKindRepository>();
         }        
     }
 }

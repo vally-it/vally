@@ -39,13 +39,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountAppService.cs" />
+    <Compile Include="AccountKindAppService.cs" />
     <Compile Include="AppServiceBase.cs" />
+    <Compile Include="EntryAppService.cs" />
+    <Compile Include="EntryKindAppService.cs" />
+    <Compile Include="Interface\IAccountAppService.cs" />
+    <Compile Include="Interface\IAccountKindAppService.cs" />
+    <Compile Include="Interface\IEntryAppService.cs" />
+    <Compile Include="Interface\IEntryKindAppService.cs" />
+    <Compile Include="Interface\IUserAppService.cs" />
     <Compile Include="ProdutoAppService.cs" />
     <Compile Include="ClienteAppService.cs" />
     <Compile Include="Interface\IAppServiceBase.cs" />
     <Compile Include="Interface\IProdutoAppService.cs" />
     <Compile Include="Interface\IClienteAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProjetoModeloDDD.Domain\ProjectVally.Domain.csproj">

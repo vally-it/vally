@@ -11,13 +11,18 @@ namespace ProjectVally.Infra.Data.Contexto
     {
 
         public ProjetoModeloContext()
-            : base("ProjetoModeloDDD")
+            : base("ProjectVallyDB")
         {
 
         }
 
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<AccountKind> AccountKinds { get; set; }
+        public DbSet<Entry> Entries { get; set; }
+        public DbSet<EntryKind> EntryKinds { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
