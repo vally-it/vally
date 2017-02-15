@@ -49,11 +49,7 @@
     <Compile Include="Interface\IEntryAppService.cs" />
     <Compile Include="Interface\IEntryKindAppService.cs" />
     <Compile Include="Interface\IUserAppService.cs" />
-    <Compile Include="ProdutoAppService.cs" />
-    <Compile Include="ClienteAppService.cs" />
     <Compile Include="Interface\IAppServiceBase.cs" />
-    <Compile Include="Interface\IProdutoAppService.cs" />
-    <Compile Include="Interface\IClienteAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAppService.cs" />
   </ItemGroup>

@@ -13,11 +13,9 @@ namespace ProjectVally.Infra.Data.Contexto
         public ProjetoModeloContext()
             : base("ProjectVallyDB")
         {
-
+            var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
 
-        public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Produto> Produtos { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<AccountKind> AccountKinds { get; set; }
@@ -26,6 +24,8 @@ namespace ProjectVally.Infra.Data.Contexto
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            
+
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
@@ -40,13 +40,13 @@ namespace ProjectVally.Infra.Data.Contexto
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(250));
 
-            modelBuilder.Configurations.Add(new ClienteConfiguration());
-            modelBuilder.Configurations.Add(new ProdutoConfiguration());
             modelBuilder.Configurations.Add(new AccountConfiguration());
             modelBuilder.Configurations.Add(new AccountKindConfiguration());
             modelBuilder.Configurations.Add(new EntryConfiguration());
             modelBuilder.Configurations.Add(new EntryKindConfiguration());
             modelBuilder.Configurations.Add(new UserConfiguration());
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public override int SaveChanges()

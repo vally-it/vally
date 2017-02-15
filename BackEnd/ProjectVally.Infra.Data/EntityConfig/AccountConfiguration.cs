@@ -7,6 +7,7 @@ namespace ProjectVally.Infra.Data.EntityConfig
     {
         public AccountConfiguration()
         {
+            ToTable("Account");
             HasKey(a => a.AccountId);
 
             Property(a => a.Description)

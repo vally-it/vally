@@ -52,12 +52,10 @@
   <ItemGroup>
     <Compile Include="Contexto\ProjetoModeloContext.cs" />
     <Compile Include="EntityConfig\AccountKindConfiguration.cs" />
-    <Compile Include="EntityConfig\ClienteConfiguration.cs" />
     <Compile Include="EntityConfig\AccountConfiguration.cs" />
     <Compile Include="EntityConfig\EntryConfiguration.cs" />
     <Compile Include="EntityConfig\EntryKindConfiguration.cs" />
     <Compile Include="EntityConfig\UserConfiguration.cs" />
-    <Compile Include="EntityConfig\ProdutoConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AccountKindRepository.cs" />
@@ -65,8 +63,6 @@
     <Compile Include="Repositories\EntryRepository.cs" />
     <Compile Include="Repositories\AccountRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="Repositories\ClienteRepository.cs" />
-    <Compile Include="Repositories\ProdutoRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
   </ItemGroup>
   <ItemGroup>
