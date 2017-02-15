@@ -16,11 +16,11 @@ namespace ProjectVally.Infra.Data.Contexto
             var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<Account> Accounts { get; set; }
-        public DbSet<AccountKind> AccountKinds { get; set; }
-        public DbSet<Entry> Entries { get; set; }
-        public DbSet<EntryKind> EntryKinds { get; set; }
+        public IDbSet<User> Users { get; set; }
+        public IDbSet<Account> Accounts { get; set; }
+        public IDbSet<AccountKind> AccountKinds { get; set; }
+        public IDbSet<Entry> Entries { get; set; }
+        public IDbSet<EntryKind> EntryKinds { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
