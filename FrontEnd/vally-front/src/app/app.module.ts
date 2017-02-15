@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { EntryListComponent } from './entry-list/entry-list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
+import { AccountService } from './services/account.service';
 
 const appRoutes: Routes = [
   { path: 'accounts', component: AccountComponent },
@@ -26,7 +27,7 @@ const appRoutes: Routes = [
     MaterialModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AccountService],
   bootstrap: [AppComponent]
 })
 

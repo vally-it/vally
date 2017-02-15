@@ -1,29 +1,24 @@
-<md-card>
-    <div layout="row">
-        <div flex>Conta corrente</div>
-        <div flex>
-            <md-chip-list>
-                <a md-raised-button routerLink=".">Editar</a>
-                <a md-raised-button routerLink=".">Desativar</a>
-                <a md-raised-button routerLink=".">Remover</a>
-            </md-chip-list>
+<div class="row">
+    <div *ngFor="let account of accounts" class="col s12 m6">
+        <div class="card grey darken-3">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="col m12">
+                        <span class="card-title">{{account.description}}</span>
+                    </div>
+                    <div class="col m6">
+                        <i class="medium material-icons">credit_card</i>
+                    </div>
+                    <div class="col m6">
+                        <h4 class="right-align">{{account.currentBalance | currency:'BRL':true:'1.2-2'}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card-action right-align">
+                <a class="red-text darken-3" href="#">Débito</a>
+                <a class="teal-text darken-3" href="#">Crédito</a>
+                <a class="blue-text darken-3" href="#">Extrato</a>
+            </div>
         </div>
     </div>
-</md-card>
-
-<div>
-
-  <div layout="row">
-
-    <div flex>First item in row</div>
-    <div flex="20">Second item in row</div>
-
-  </div>
-  <div layout="column">
-
-    <div flex="66">First item in column</div>
-    <div flex="33">Second item in column</div>
-
-  </div>
-
 </div>

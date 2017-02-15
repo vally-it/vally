@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Account } from '../account';
 
 @Component({
   selector: 'app-account',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AccountComponent implements OnInit {
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    
   }
 
 }
