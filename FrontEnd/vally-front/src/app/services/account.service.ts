@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Account } from '../account';
-
+import { Http } from '@angular/http';
 
 @Injectable()
 export class AccountService {
+  private serviceUrl: string;
 
-  constructor() {}
+  constructor(private http: Http) {
+    this.serviceUrl = "http://vally-api.azurewebsites.net/api/accounts";
+  }
 
   getAll(){
-    let accounts: Array<Account>;
-    accounts = new Array<Account>();
+    
   }
 
 }
