@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Http;
+using System.Web.Mvc;
 using ProjectVally.API.AutoMapper;
 
 namespace ProjectVally.API
@@ -10,6 +11,7 @@ namespace ProjectVally.API
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
             AutoMapperConfig.RegisterMappings();
+            AreaRegistration.RegisterAllAreas();
         }
     }
 }
