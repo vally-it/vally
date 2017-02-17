@@ -13,7 +13,6 @@ namespace ProjectVally.API.Controllers
 
         public AccountKindsController(IAccountKindAppService accountKindApp)
         {
-
             this._accountKindApp = accountKindApp;
         }
 

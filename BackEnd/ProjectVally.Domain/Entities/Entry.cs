@@ -10,6 +10,7 @@ namespace ProjectVally.Domain.Entities
         public decimal Value { get; set; }
         public char Type { get; set; }
         public DateTime Date { get; set; }
+        public DateTime RegisterDate { get; set; }
 
         public int AccountId { get; set; }
         public virtual Account Account { get; set; }

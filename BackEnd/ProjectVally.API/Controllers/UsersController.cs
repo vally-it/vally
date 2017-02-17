@@ -2,8 +2,10 @@
 using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
+using AutoMapper;
 using ProjectVally.Domain.Entities;
 using ProjectVally.Application.Interface;
+using ProjectVally.API.ViewModels;
 
 namespace ProjectVally.API.Controllers
 {
@@ -17,27 +19,29 @@ namespace ProjectVally.API.Controllers
         }
 
         // GET: api/Users
-        public IEnumerable<User> GetUsers()
+        public IEnumerable<UserViewModel> GetUsers()
         {
-            return _userApp.GetAll();
+            var usersViewModel = Mapper.Map<IEnumerable<User>, IEnumerable<UserViewModel>>(_userApp.GetAll());
+            return usersViewModel;
         }
 
         // GET: api/Users/5
-        [ResponseType(typeof(User))]
+        [ResponseType(typeof(UserViewModel))]
         public IHttpActionResult GetUser(int id)
         {
-            User user = _userApp.GetById(id);
-            if (user == null)
+            var user = _userApp.GetById(id);
+            var userViewModel = Mapper.Map<User, UserViewModel>(user);
+            if (userViewModel == null)
             {
                 return NotFound();
             }
 
-            return Ok(user);
+            return Ok(userViewModel);
         }
 
         // PUT: api/Users/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutUser(int id, User user)
+        public IHttpActionResult PutUser(int id, UserViewModel user)
         {
             if (!ModelState.IsValid)
             {
@@ -48,8 +52,8 @@ namespace ProjectVally.API.Controllers
             {
                 return BadRequest();
             }
-
-            _userApp.Update(user);
+            var userDomain = Mapper.Map<UserViewModel, User>(user);
+            _userApp.Update(userDomain);
 
 
             if (!UserExists(id))
@@ -61,21 +65,21 @@ namespace ProjectVally.API.Controllers
         }
 
         // POST: api/Users
-        [ResponseType(typeof(User))]
-        public IHttpActionResult PostUser(User user)
+        [ResponseType(typeof(UserViewModel))]
+        public IHttpActionResult PostUser(UserViewModel user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            var userDomain = Mapper.Map<UserViewModel, User>(user);
+            _userApp.Add(userDomain);
 
-            _userApp.Add(user);
-
-            return CreatedAtRoute("DefaultApi", new { id = user.UserId }, user);
+            return CreatedAtRoute("DefaultApi", new { id = userDomain.UserId }, user);
         }
 
         // DELETE: api/Users/5
-        [ResponseType(typeof(User))]
+        [ResponseType(typeof(UserViewModel))]
         public IHttpActionResult DeleteUser(int id)
         {
             User user = _userApp.GetById(id);
@@ -83,10 +87,10 @@ namespace ProjectVally.API.Controllers
             {
                 return NotFound();
             }
-
+            var userViewModel = Mapper.Map<User, UserViewModel>(user);
             _userApp.Remove(user);
 
-            return Ok(user);
+            return Ok(userViewModel);
         }
 
         protected override void Dispose(bool disposing)

@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Http;
+using ProjectVally.API.AutoMapper;
 
 namespace ProjectVally.API
 {
@@ -8,7 +9,7 @@ namespace ProjectVally.API
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
-
+            AutoMapperConfig.RegisterMappings();
         }
     }
 }

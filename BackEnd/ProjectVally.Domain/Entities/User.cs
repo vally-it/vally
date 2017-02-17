@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace ProjectVally.Domain.Entities
 {
     public class User
@@ -9,6 +11,7 @@ namespace ProjectVally.Domain.Entities
         public string Mail { get; set; }
         public string Password { get; set; }
         public bool Enabled { get; set; }
+        public DateTime RegisterDate { get; set; }
         
     }
 }
