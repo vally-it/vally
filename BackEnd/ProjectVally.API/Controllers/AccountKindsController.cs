@@ -4,29 +4,30 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using ProjectVally.Domain.Entities;
 using ProjectVally.Application.Interface;
+using ProjectVally.API.ViewModels;
 
 namespace ProjectVally.API.Controllers
 {
-    public class AccountKindsController : ApiController
+    public class AccountKindsController : ApiControllerBase<AccountKindViewModel, AccountKind>
     {
         private readonly IAccountKindAppService _accountKindApp;
 
-        public AccountKindsController(IAccountKindAppService accountKindApp)
+        public AccountKindsController(IAccountKindAppService accountKindApp):base(accountKindApp)
         {
             this._accountKindApp = accountKindApp;
         }
 
         // GET: api/AccountKinds
-        public IEnumerable<AccountKind> GetAccountKinds()
+        public IEnumerable<AccountKindViewModel> GetAccountKinds()
         {
-            return _accountKindApp.GetAll();
+            return GetAll();
         }
 
         // GET: api/AccountKinds/5
-        [ResponseType(typeof(AccountKind))]
+        [ResponseType(typeof(AccountKindViewModel))]
         public IHttpActionResult GetAccountKind(int id)
         {
-            AccountKind accountKind = _accountKindApp.GetById(id);
+            var accountKind = GetViewModelById(id);
             if (accountKind == null)
             {
                 return NotFound();
@@ -37,7 +38,7 @@ namespace ProjectVally.API.Controllers
 
         // PUT: api/AccountKinds/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutAccountKind(int id, AccountKind accountKind)
+        public IHttpActionResult PutAccountKind(int id, AccountKindViewModel accountKind)
         {
             if (!ModelState.IsValid)
             {
@@ -48,11 +49,11 @@ namespace ProjectVally.API.Controllers
             {
                 return BadRequest();
             }
+            var accountKindDomain = GetEntityByViewModel(accountKind);
+            _accountKindApp.Update(accountKindDomain);
 
-            _accountKindApp.Update(accountKind);
 
-
-            if (!AccountKindExists(id))
+            if (!EntityExists(id))
             {
                 return NotFound();
             }
@@ -61,21 +62,21 @@ namespace ProjectVally.API.Controllers
         }
 
         // POST: api/AccountKinds
-        [ResponseType(typeof(AccountKind))]
-        public IHttpActionResult PostAccountKind(AccountKind accountKind)
+        [ResponseType(typeof(AccountKindViewModel))]
+        public IHttpActionResult PostAccountKind(AccountKindViewModel accountKind)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            var accountKindDomain = GetEntityByViewModel(accountKind);
+            _accountKindApp.Add(accountKindDomain);
 
-            _accountKindApp.Add(accountKind);
-
-            return CreatedAtRoute("DefaultApi", new { id = accountKind.AccountKindId }, accountKind);
+            return CreatedAtRoute("DefaultApi", new { id = accountKindDomain.AccountKindId }, accountKind);
         }
 
         // DELETE: api/AccountKinds/5
-        [ResponseType(typeof(AccountKind))]
+        [ResponseType(typeof(AccountKindViewModel))]
         public IHttpActionResult DeleteAccountKind(int id)
         {
             AccountKind accountKind = _accountKindApp.GetById(id);
@@ -86,7 +87,9 @@ namespace ProjectVally.API.Controllers
 
             _accountKindApp.Remove(accountKind);
 
-            return Ok(accountKind);
+            var accountKindViewModel = GetViewModelByEntity(accountKind);
+
+            return Ok(accountKindViewModel);
         }
 
         protected override void Dispose(bool disposing)
@@ -98,9 +101,5 @@ namespace ProjectVally.API.Controllers
             base.Dispose(disposing);
         }
 
-        private bool AccountKindExists(int id)
-        {
-            return _accountKindApp.GetById(id) != null;
-        }
     }
 }

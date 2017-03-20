@@ -9,11 +9,11 @@ using ProjectVally.API.ViewModels;
 
 namespace ProjectVally.API.Controllers
 {
-    public class UsersController : ApiController
+    public class UsersController : ApiControllerBase<UserViewModel, User>
     {
         private readonly IUserAppService _userApp;
 
-        public UsersController(IUserAppService userApp)
+        public UsersController(IUserAppService userApp):base(auserApp)
         {
             this._userApp = userApp;
         }
@@ -21,16 +21,14 @@ namespace ProjectVally.API.Controllers
         // GET: api/Users
         public IEnumerable<UserViewModel> GetUsers()
         {
-            var usersViewModel = Mapper.Map<IEnumerable<User>, IEnumerable<UserViewModel>>(_userApp.GetAll());
-            return usersViewModel;
+            return GetAll();
         }
 
         // GET: api/Users/5
         [ResponseType(typeof(UserViewModel))]
         public IHttpActionResult GetUser(int id)
-        {
-            var user = _userApp.GetById(id);
-            var userViewModel = Mapper.Map<User, UserViewModel>(user);
+        { 
+            var userViewModel = GetViewModelById(id);
             if (userViewModel == null)
             {
                 return NotFound();
@@ -52,11 +50,11 @@ namespace ProjectVally.API.Controllers
             {
                 return BadRequest();
             }
-            var userDomain = Mapper.Map<UserViewModel, User>(user);
+            var userDomain = GetEntityByViewModel(user);
             _userApp.Update(userDomain);
 
 
-            if (!UserExists(id))
+            if (!EntityExists(id))
             {
                 return NotFound();
             }
@@ -72,7 +70,7 @@ namespace ProjectVally.API.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var userDomain = Mapper.Map<UserViewModel, User>(user);
+            var userDomain = GetEntityByViewModel(user);
             _userApp.Add(userDomain);
 
             return CreatedAtRoute("DefaultApi", new { id = userDomain.UserId }, user);
@@ -87,7 +85,7 @@ namespace ProjectVally.API.Controllers
             {
                 return NotFound();
             }
-            var userViewModel = Mapper.Map<User, UserViewModel>(user);
+            var userViewModel = GetViewModelByEntity(user);
             _userApp.Remove(user);
 
             return Ok(userViewModel);
@@ -102,9 +100,5 @@ namespace ProjectVally.API.Controllers
             base.Dispose(disposing);
         }
 
-        private bool UserExists(int id)
-        {
-            return _userApp.GetById(id) != null;
-        }
     }
 }
