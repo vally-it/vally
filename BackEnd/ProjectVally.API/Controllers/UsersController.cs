@@ -13,7 +13,7 @@ namespace ProjectVally.API.Controllers
     {
         private readonly IUserAppService _userApp;
 
-        public UsersController(IUserAppService userApp):base(auserApp)
+        public UsersController(IUserAppService userApp):base(userApp)
         {
             this._userApp = userApp;
         }
