@@ -9,6 +9,8 @@ namespace ProjectVally.API.AutoMapper
         public ViewModelToDomainMappingProfile()
         {
             CreateMap<User, UserViewModel>();
+            CreateMap<Account, AccountViewModel>();
+            CreateMap<AccountKind, AccountKindViewModel>();
         }
 
         public override string ProfileName
