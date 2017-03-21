@@ -15,7 +15,7 @@ namespace ProjectVally.API.ViewModels
         [MinLength(2, ErrorMessage = "Mínimo de {1} caracteres")]
         public string Description { get; set; }
 
-        public int OwnerId { get; set; }
+        public int? OwnerId { get; set; }
         public virtual EntryKindViewModel Owner { get; set; }
 
     }
