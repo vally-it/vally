@@ -81,9 +81,7 @@ namespace ProjectVally.API.App_Start
             kernel.Bind<IAccountKindService>().To<AccountKindService>();
             kernel.Bind<IEntryService>().To<EntryService>();
             kernel.Bind<IEntryKindService>().To<EntryKindService>();
-
-
-
+            
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
             kernel.Bind<IUserRepository>().To<UserRepository>();
             kernel.Bind<IAccountRepository>().To<AccountRepository>();

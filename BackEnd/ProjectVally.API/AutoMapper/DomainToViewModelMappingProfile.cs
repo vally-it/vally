@@ -12,6 +12,9 @@ namespace ProjectVally.API.AutoMapper
             CreateMap<UserViewModel, User>();
             CreateMap<AccountViewModel, Account>();
             CreateMap<AccountKindViewModel, AccountKind>();
+            CreateMap<EntryKindViewModel, EntryKind>();
+            CreateMap<EntryViewModel, Entry>();
+
         }
 
         public override string ProfileName
