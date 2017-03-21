@@ -12,7 +12,7 @@ namespace ProjectVally.Infra.Data.EntityConfig
             Property(e => e.Description)
                 .IsRequired();
 
-            HasRequired(e => e.Owner)
+            HasOptional(e => e.Owner)
                 .WithMany()
                 .HasForeignKey(e => e.OwnerId);
 
