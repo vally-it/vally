@@ -15,24 +15,24 @@ namespace ProjectVally.API.Controllers
             _appServiceBase = appServiceBase;
         }
 
-        public IEnumerable<TViewModel> GetAll()
+        protected IEnumerable<TViewModel> GetAll()
         {
             var viewModel = Mapper.Map<IEnumerable<TEntity>, IEnumerable<TViewModel>>(_appServiceBase.GetAll());
             return viewModel;
         }
 
-        public TViewModel GetViewModelById(int id)
+        protected TViewModel GetViewModelById(int id)
         {
             var entity = _appServiceBase.GetById(id);
             return GetViewModelByEntity(entity);
         }
 
-        public TViewModel GetViewModelByEntity(TEntity entity)
+        protected TViewModel GetViewModelByEntity(TEntity entity)
         {
             return Mapper.Map<TEntity, TViewModel>(entity);
         }
 
-        public TEntity GetEntityByViewModel(TViewModel viewModel)
+        protected TEntity GetEntityByViewModel(TViewModel viewModel)
         {
             return Mapper.Map<TViewModel, TEntity>(viewModel);
         }
