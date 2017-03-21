@@ -24,7 +24,7 @@ namespace ProjectVally.Infra.Data.Contexto
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            
+            //Database.SetInitializer<ProjetoModeloContext>(null);
 
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
